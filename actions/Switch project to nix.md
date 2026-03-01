@@ -44,7 +44,7 @@ use the androidenv package in nix for generating the android sdk compose, and fo
 
 We are pretty much only using libraries for doing all this, so no need to create any wrappers yourself. You won't be making new apps very often and can revise later if need be.
 
-Use gradle2nix to create a lock file for gradle dependancies before use. otherwise it won't build
+Use gradle2nix to create a lock file for gradle dependancies before use. otherwise it won't build. You'll need to do this everytime you update the dependancies
 
 
 
