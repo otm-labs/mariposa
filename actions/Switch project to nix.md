@@ -23,6 +23,7 @@ gradle build -Dorg.gradle.project.android.aapt2FromMavenOverride=/nix/store/dph9
 # Questions
 - [v] How to build APK. 
 	- A : gradle build task seems to produce all targets (except ios ofc)
+
 # Statement of action
 Switch the packing / build system to nixos so you can use your helix editor instead of android studio.
 
@@ -33,7 +34,7 @@ Switch the packing / build system to nixos so you can use your helix editor inst
 - ability to run apk in emulated android and install using nix apps outputs
 - all versioning specified decoratively
 # statement of design
-Create a new nix flake using gradle2nix for the project. Using Android compose set the android home and SDK location and make it available to all derivations. 
+Create a new nix flake using gradle2nix V2 for the project. Using Android compose set the android home and SDK location and make it available to all derivations.
 
 This flake should have four packages: one uber jar, a wrapped version packaged for linux which sets the LD_path for any dependencies like libgl (this should be the default package), an output to build the APK, and a output to create the emulator script for the APK. Additionally it should have 2 apps. One for running the emulator script, and another for installing the apk.
 
